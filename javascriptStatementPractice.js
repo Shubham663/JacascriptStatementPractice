@@ -1,11 +1,9 @@
-const ftToInch = 12;
-const inchToFt = 1/12;
-
-let length = 4;
-console.log("length in inches " + length);
-console.log("length in feet " + length*inchToFt);
-
-let area = 60*40;
-console.log("area in inch squared " + area);
-console.log("area in feet squared " + area*inchToFt*inchToFt);
-console.log("area in acres " + (area*inchToFt*inchToFt)/43560);
+let max = 0;
+let min = 1000;
+for(i=0;i<5;i++){
+    let val = Math.floor(Math.random()*1000);
+    max=Math.max(max,val);
+    min=Math.min(min,val);
+}
+console.log("min val " + min);
+console.log("max val " + max);
