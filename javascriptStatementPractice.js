@@ -1,6 +1,10 @@
-const n = 12;
-let val = 1;
-for(i=0;i<=n;i++){
-    console.log(i + " power of 2 is " + val);
-    val*=2;
+const n = 5;
+let val = getNthHarmonic(n);
+console.log(val);
+
+function getNthHarmonic(n){
+    sum = 0;
+    for(i=1;i<=n;i++)
+        sum += 1/i;
+    return sum;
 }
