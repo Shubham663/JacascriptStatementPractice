@@ -1,19 +1,30 @@
-let val = 100;
-let noOfBets = 0;
-let noOfWinnings = 0;
+let val = Math.floor(Math.random()*2);
+let temp = Math.floor(Math.random()*68)+32;
+const CELSIUS_LOWEST = 0;
+const CELSIUS_HIGHEST = 100;
+const FAHRENHEIT_LOWEST = 32;
+const FAHRENHEIT_HIGHEST = 212;
 
-while(val > 0 && val < 200){
-    noOfBets++;
-    let val2 = Math.floor(Math.random()*2);
-    if(val2 == 0){
-        val++;
-        noOfWinnings++;
-    }
+let temp2 = convertTemperature(val,temp);
+if(temp2 != 300){
+    if(val == 0)
+        console.log("The temperature in fahrenheit is " + temp2);
     else
-        val--;
+        console.log("The temperature in celsius is " + temp2);
 }
-
-if(val == 200)
-    console.log("Won in " + noOfBets + " bets. Goal of 200 reached");
-else
-    console.log("All money lost. You won " + noOfWinnings + " number of times and lost " + (noOfBets - noOfWinnings) + " times.");
+function convertTemperature(val,temp){
+    switch(val){
+    case 0: if(temp <CELSIUS_LOWEST || temp>CELSIUS_HIGHEST){
+                console.log("The temperature is not bw boiling and freezing point in degree Celsius");
+                return 300;
+            }
+            let f = temp*9/5 + 32;
+            return f;
+    case 1: if(temp<FAHRENHEIT_LOWEST || temp>FAHRENHEIT_HIGHEST){
+                console.log("The temperature is not bw boiling and freezing point in degree Fahrenheit");
+                return 300;
+            }  
+            let c = (temp-32)*5/9;
+            return c;
+    }
+}
