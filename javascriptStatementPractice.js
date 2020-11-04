@@ -1,10 +1,13 @@
-const n = 5;
-let val = getNthHarmonic(n);
-console.log(val);
+const n =27;
+let val = isPrime(n);
+if(val == true)
+    console.log("The number " + n + " is a prime number");
+else
+    console.log("The number " + n + " is not a prime number");
 
-function getNthHarmonic(n){
-    sum = 0;
-    for(i=1;i<=n;i++)
-        sum += 1/i;
-    return sum;
+function isPrime(n){
+    for(i=2;i<=Math.floor(Math.sqrt(n));i++)
+        if(n % i == 0)
+            return false;
+    return true;
 }
