@@ -1,8 +1,19 @@
-let day = 20;
-let month = 04;
-var d = new Date(2020,month-1,day);
-var d2 = new Date(2020,02,20);
-var d3 = new Date(2020,05,20);
-if(d > d2    &&    d < d3)
-    console.log("date present in range " + d2 + " to " + d3);
-// if()
+let year = 2100;
+if(isLeapYear(year))
+    console.log("The year " + year + " is a leap year");
+else
+    console.log("The year " + year + " is not a leap year");
+
+function isLeapYear(year){
+    let digits = 0;
+    let temp = year;
+    while(temp >= 1){
+        digits++;
+        temp/=10;
+    }
+    if(digits == 4 && year%4 == 0){
+        if(year%100 !=0 || (year%100 == 0 && year%400 == 0))
+            return true;
+    }
+    return false;
+}
