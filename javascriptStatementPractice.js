@@ -1,13 +1,15 @@
-const n = 6;
-let val = powerOfTwo(n);
-console.log(val);
+let heads = 0;
+let tails = 0;
 
-function powerOfTwo(n){
-    let val = 1;
-    let i = 1;
-    while(val < 256 && i <= n ){
-        val*=2;
-        i++;
-    }
-    return val;
+while(heads <11 && tails < 11){
+    let val = Math.floor(Math.random()*2);
+    if(val == 0)
+        heads++;
+    else
+        tails++;
 }
+
+if(tails == 11)
+    console.log("Tails won eleven times");
+else
+    console.log("Heads won eleven times");
