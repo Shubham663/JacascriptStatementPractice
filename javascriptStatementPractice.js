@@ -1,12 +1,23 @@
-let number1 = 4;
-let number2 = 6;
-let number3 = 9;
-let val1 = number1 + number2*number3;
-let val2 = number1%number2 + number3;
-let val3 = number3 + number1/number2;
-let val4 = number3 + number1*number2;
-
-let max1= Math.max(val1,val2);
-let max2= Math.max(val3,val4);
-let max3 = Math.max(max1,max2);
-console.log(max3);
+let number = Math.floor(Math.random()*10);
+switch(number){
+    case 0: console.log("zero");
+            break;
+    case 1: console.log("one");
+            break;
+    case 2: console.log("two");
+            break;
+    case 3: console.log("three");
+            break;
+    case 4: console.log("four");
+            break;
+    case 5: console.log("five");
+            break;
+    case 6: console.log("six");
+            break;
+    case 7: console.log("seven");
+            break;
+    case 8: console.log("eight");
+            break;
+    case 9: console.log("nine");
+            break;
+}
