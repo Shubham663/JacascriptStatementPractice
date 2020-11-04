@@ -1,23 +1,19 @@
-let number = Math.floor(Math.random()*10);
+let number = Math.floor(Math.random()*7);
 switch(number){
-    case 0: console.log("zero");
+    case 0: console.log("SUNDAY");
             break;
-    case 1: console.log("one");
+    case 1: console.log("MONDAY");
             break;
-    case 2: console.log("two");
+    case 2: console.log("TUEDAY");
             break;
-    case 3: console.log("three");
+    case 3: console.log("WEDNESDAY");
             break;
-    case 4: console.log("four");
+    case 4: console.log("THURSDAY");
             break;
-    case 5: console.log("five");
+    case 5: console.log("FRIDAY");
             break;
-    case 6: console.log("six");
+    case 6: console.log("SATURDAY");
             break;
-    case 7: console.log("seven");
-            break;
-    case 8: console.log("eight");
-            break;
-    case 9: console.log("nine");
+    default: console.log("value not correct");
             break;
 }
