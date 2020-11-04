@@ -1,21 +1,15 @@
-let number = Math.floor(Math.random()*10);
+let number = Math.floor(Math.random()*7);
 if(number == 0)
-    console.log("zero");
+    console.log("SUNDAY");
 else if(number == 1)
-    console.log("one");
+    console.log("MONDAY");
 else if(number == 2)
-    console.log("two");
+    console.log("TUESDAY");
 else if(number == 3)
-    console.log("three");
+    console.log("WEDNESDAY");
 else if(number == 4)
-    console.log("four");
+    console.log("THURSDAY");
 else if(number == 5)
-    console.log("five");
+    console.log("FRIDAY");
 else if(number == 6)
-    console.log("six");
-else if(number == 7)
-    console.log("seven");
-else if(number == 8)
-    console.log("eight");
-else if(number == 9)
-    console.log("nine");
+    console.log("SATURDAY");
