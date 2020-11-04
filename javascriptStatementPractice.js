@@ -1,9 +1,13 @@
-const val = 5;
-fac = getFactorial(val);
-console.log(fac);
+const val = 180;
+fac = printFactors(val);
 
-function getFactorial(val){
-    if(val ==2 || val ==1)
-        return val;
-    return val*getFactorial(val-1);
+function printFactors(val){
+    while(val > 1){
+        for(i=2;i<=val;i++)
+            if(val%i == 0){
+                val/=i;
+                console.log(i);
+                break;
+            }
+    }
 }
