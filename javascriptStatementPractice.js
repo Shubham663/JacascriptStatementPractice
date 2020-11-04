@@ -1,13 +1,13 @@
-const val = 180;
-fac = printFactors(val);
+const n = 6;
+let val = powerOfTwo(n);
+console.log(val);
 
-function printFactors(val){
-    while(val > 1){
-        for(i=2;i<=val;i++)
-            if(val%i == 0){
-                val/=i;
-                console.log(i);
-                break;
-            }
+function powerOfTwo(n){
+    let val = 1;
+    let i = 1;
+    while(val < 256 && i <= n ){
+        val*=2;
+        i++;
     }
+    return val;
 }
