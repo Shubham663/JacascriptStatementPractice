@@ -1,15 +1,19 @@
-let heads = 0;
-let tails = 0;
+let val = 100;
+let noOfBets = 0;
+let noOfWinnings = 0;
 
-while(heads <11 && tails < 11){
-    let val = Math.floor(Math.random()*2);
-    if(val == 0)
-        heads++;
+while(val > 0 && val < 200){
+    noOfBets++;
+    let val2 = Math.floor(Math.random()*2);
+    if(val2 == 0){
+        val++;
+        noOfWinnings++;
+    }
     else
-        tails++;
+        val--;
 }
 
-if(tails == 11)
-    console.log("Tails won eleven times");
+if(val == 200)
+    console.log("Won in " + noOfBets + " bets. Goal of 200 reached");
 else
-    console.log("Heads won eleven times");
+    console.log("All money lost. You won " + noOfWinnings + " number of times and lost " + (noOfBets - noOfWinnings) + " times.");
