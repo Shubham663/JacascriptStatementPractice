@@ -33,7 +33,7 @@ for(let i=0;i<=6;i++){
         max1 = i;
 }
     
-    for(let i=0;i<=6;i++){
+    for(let i=1;i<=6;i++){
         occurence(i,dictionary[i]);
     }
     console.log("The value that came maximum=10 times: " + max1);
