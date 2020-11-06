@@ -4,28 +4,8 @@ for(let i=0;i<10;i++){
     numberArray.push(number);
 }
 console.log(numberArray);
-let smallest = 1000;
-let secondSmallest = 1000;
-let largest = 0;
-let secondlargest = 0;
-for(let i=0;i<numberArray.length;i++){
-    let val = numberArray[i];
-    if( val < secondSmallest){
-        if(val < smallest){
-            secondSmallest = smallest;
-            smallest = val;
-        }
-        else
-        secondSmallest = val;
-    }
-    if( val > secondlargest){
-        if(val > largest){
-            secondlargest = largest;
-            largest = val;
-        }
-        else
-        secondlargest = val;
-    }
-}
+let sortNumArray = numberArray.slice(0).sort();
+let secondSmallest = sortNumArray[1];
+let secondlargest = sortNumArray[8];
 console.log("Second smallest element " + secondSmallest);
 console.log("Second largest element: " + secondlargest);
